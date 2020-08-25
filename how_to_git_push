@@ -19,3 +19,16 @@ git remote -v
 
 git push -f origin master
 That’s all
+You cannot push anything that hasn't been committed yet. The order of operations is:
+
+Make your change.
+git add . - this stages your changes for committing( if subfolder not added, go to subfolder then run git add . )
+git commit - this commits your staged changes locally ( you need to back to root folde then do git commit)
+git push - this pushes your committed changes to a remote (always push at root )
+If you push without committing, nothing gets pushed. If you commit without adding, nothing gets committed. If you add without committing, nothing at all happens, git merely remembers that the changes you added should be considered for the following commit.
+
+The message you're seeing (your branch is ahead by 1 commit) means that your local repository has one commit that hasn't been pushed yet.
+
+In other words: add and commit are local operations, push, pull and fetch are operations that interact with a remote.
+
+Since there seems to be an official source control workflow in place where you work, you should ask internally how this should be handled.
