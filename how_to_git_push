@@ -1,34 +1,9 @@
-Adding an existing project to GitHub using the command line
-  gsantopaolo    October 12, 2018 0 313,282   Less than a minute
-Create a new repository on GitHub. You can also add a gitignore file, a readme and a licence if you want
- Open Git Bash
-Change the current working directory to your local project.
-Initialize the local directory as a Git repository.
-git init
-Add the files in your new local repository. This stages them for the first commit.
-git add .
- Commit the files that you’ve staged in your local repository.
-git commit -m "initial commit"
- Copy the https url of your newly created repo
-In the Command prompt, add the URL for the remote repository where your local repository will be pushed.
-
-git remote add origin remote repository URL
-
-git remote -v
- Push the changes in your local repository to GitHub.
-
-git push -f origin master
-That’s all
-You cannot push anything that hasn't been committed yet. The order of operations is:
-
-Make your change.
-git add . - this stages your changes for committing( if subfolder not added, go to subfolder then run git add . )
-git commit - this commits your staged changes locally ( you need to back to root folde then do git commit)
-git push - this pushes your committed changes to a remote (always push at root )
-If you push without committing, nothing gets pushed. If you commit without adding, nothing gets committed. If you add without committing, nothing at all happens, git merely remembers that the changes you added should be considered for the following commit.
-
-The message you're seeing (your branch is ahead by 1 commit) means that your local repository has one commit that hasn't been pushed yet.
-
-In other words: add and commit are local operations, push, pull and fetch are operations that interact with a remote.
-
-Since there seems to be an official source control workflow in place where you work, you should ask internally how this should be handled.
+1. create a new Git repo in [github.com]
+2. find the link to your repo
+3 `git remote add origin remote repo URL`
+4 `cd` to your local project dir and do `git init`
+5 if some of your folders/files are from other repo and **chances** are they will have **.git/** folder in them, to see ahidden folder do `cd .`and `tab tab`
+6 if there is `.git/` folder, you can decide to wethere to make it [submodule] or delete the `.git/` by `rm -rf .git`
+7 `git add .` will add everything inside dir 
+8 `git commit -m "mesage you want to add to this commit"
+9 `git push` then login, pass, and you are done! 
