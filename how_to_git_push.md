@@ -1,4 +1,3 @@
-**
 1. create a new Git repo in [github.com](https://github.com/JasonTryharder/Hello-world.git)
 2. find the link to your repo
 3. `git remote add origin remote repo URL`
@@ -8,4 +7,4 @@
 7. `git add .` will add everything inside dir 
 8. `git commit -m "mesage you want to add to this commit"
 9. `git push` then login, pass, and you are done!
-**
+
