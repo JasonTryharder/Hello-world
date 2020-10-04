@@ -7,4 +7,6 @@
 7. `git add .` will add everything inside dir 
 8. `git commit -m "mesage you want to add to this commit"
 9. `git push` then login, pass, and you are done!
-
+10. `git rm -r --cached FolderName`
+11. `git commit -m "Removed folder from repository"`
+12. `git push origin master`
