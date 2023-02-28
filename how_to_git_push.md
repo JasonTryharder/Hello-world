@@ -14,3 +14,6 @@
 1. `git rm -r --cached FolderName`
 2. `git commit -m "Removed folder from repository"`
 3. `git push origin master`
+
+**How to fork a repo and link back and update and finally start a PR** 
+use link [https://www.tomasbeuzen.com/post/git-fork-branch-pull/](https://www.tomasbeuzen.com/post/git-fork-branch-pull/)
